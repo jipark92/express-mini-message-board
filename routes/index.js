@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/new', (req,res,next){
-  res.render('new', )
+  res.render('form')
 })
 
 module.exports = router;
