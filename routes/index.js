@@ -1,16 +1,20 @@
 var express = require('express');
 var router = express.Router();
 
+let currentDate = new Date()
+let cDate = currentDate.getFullYear() + '-' + (currentDate.getMonth() + 1) + '-' + currentDate.getDate();
+let cTime = (currentDate.getHours()-12) + ":" + currentDate.getMinutes()
+
 const messages = [
   {
     text: "Hi there!",
     user: "Amando",
-    added: new Date()
+    added: cDate + " " + cTime
   },
   {
     text: "Hello World!",
     user: "Charles",
-    added: new Date()
+    added: cDate + " " + cTime
   }
 ];
 
