@@ -5,18 +5,18 @@ const messages = [
   {
     text: "Hi there!",
     user: "Amando",
-    added: new Date().getDate()
+    added: new Date()
   },
   {
     text: "Hello World!",
     user: "Charles",
-    added: new Date().getDate()
+    added: new Date()
   }
 ];
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Mini Messageboard', messages: messages });
+  res.render('index', { title: 'Mini Message Board', messages: messages });
 });
 
 router.get('/new', (req, res)=>{
@@ -30,7 +30,7 @@ router.post('/new',(req,res)=>{
   messages.push({
     text: newMessage,
     user: user,
-    added: new Date().getDate()
+    added: new Date()
   })
   res.redirect('/')
 })
